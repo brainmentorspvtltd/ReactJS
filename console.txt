@@ -1,0 +1,153 @@
+var object = {
+arr:[10,19,30,17,50],evenArr:[],
+show(){
+var that = this;
+	this.arr.forEach(function(element){
+		if(element%2==0){ that.evenArr.push(element);
+        
+}
+    })
+}
+}
+
+object.show();
+
+
+var object = {
+arr:[10,19,30,17,50],evenArr:[],
+show(){
+var that = this;
+	this.arr.forEach((element)=>{
+		if(element%2==0){ this.evenArr.push(element);
+        
+}
+    })
+}
+}
+object.show();
+
+var object = {
+arr:[10,19,30,17,50],evenArr:[],
+show(){
+var p = 10;
+var that = this;
+	this.arr.forEach((element)=>{
+		if(element%2==0){ this.evenArr.push(element*p);
+        
+}
+    })
+}
+}
+
+var object = {
+arr:[10,19,30,17,50],evenArr:[],eleArr:[10,50]
+show(){
+var that = this;
+	this.arr.forEach((element)=>{
+		if(element%2==0){ 
+	this.evenArr.push(element);
+	this.eleArr.forEach((ele)=>{
+	if(element==ele){
+	console.log("Even is Match From Array ");
+	}
+});
+
+        
+}
+    });
+}
+}
+
+function Test(){
+console.log("This is a Test ");
+}
+
+var e = new Test();
+typeof e;
+var x = ()=>1000;
+
+var t1 = function(){
+return 1000;
+}
+
+
+function show(){
+console.log("My Name is ",this.name);
+}
+
+var nameObject = {name:'Amit'};
+
+window.name = "Ram";
+
+show();  // window.show();
+
+console.dir(show);
+
+show.length;
+
+var f = show.bind(nameObject);
+f();
+show(10,20,"Amit",[10,20]);
+function disp(){
+console.log(arguments.length);
+}
+
+disp(10,20);
+disp(10,20,[10,90],"Hello");
+
+function disp(){
+console.log(arguments.length+" " + this.name);
+}
+var f = disp.bind(nameObject,90,100);
+
+disp.call(nameObject,90,100);
+
+disp.apply(nameObject,[90,100]);
+
+
+class Employee{
+	constructor(id , name, salary){
+    this.id = id;
+this.name = name;
+this.salary = salary;
+}
+print(){
+console.log(`Id is ${this.id} Name is ${this.name} and Salary is ${this.salary}`);
+}
+}
+
+var ram = new Employee(1001,"Ram",9999);
+
+ram instanceof Employee;
+
+class Person{
+constructor(age){
+this.age = age;
+}
+}
+
+class Emp extends Person{
+constructor(id , name, salary){
+super(21);
+    this.id = id;
+this.name = name;
+this.salary = salary;
+}
+print(){
+console.log(`Age is ${super.age} Id is ${this.id} Name is ${this.name} and Salary is ${this.salary}`);
+}
+}
+
+var mike = new Emp(1001,"Mike",8888);
+
+var e = document.getElementsByTagName("input");
+
+e instanceof Array;
+
+e instanceof HTMLCollection;
+
+Array.prototype.forEach.call(e,function(element){
+console.log(element);
+})
+
+Array.prototype.forEach.call(e,(element)=>element.value="");
