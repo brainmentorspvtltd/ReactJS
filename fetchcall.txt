@@ -1,0 +1,9 @@
+fetch("http://freegeoip.net/json/google.com",{method:'GET'}).then((response)=>{
+
+response.json().then(function(json) {
+var object = json;
+console.log(json.ip+" " +json.country_name);
+
+});
+
+})
