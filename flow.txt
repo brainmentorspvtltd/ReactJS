@@ -1,0 +1,1 @@
+npm start —> react-scripts —> node_modules/.bin (For react-scripts)—> node_modules/react-scripts/start.js —> node_modules/react-scripts/config/webpack.config.dev.js—>path.js
