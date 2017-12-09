@@ -1,0 +1,10 @@
+.icon {
+    width: 72px;
+    height: 72px;
+    cursor: pointer;
+}
+
+.red {
+    background-color: red;
+    font-style: italic;
+}
